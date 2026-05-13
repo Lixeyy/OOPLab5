@@ -1,4 +1,6 @@
-﻿namespace Lab5;
+﻿using System.Globalization;
+
+namespace Lab5;
 
 /// <summary>Базовий клас для коштовного каміння.</summary>
 public abstract class Gemstone
@@ -50,6 +52,8 @@ public abstract class Gemstone
     public override string ToString()
     {
         var type = IsPrecious ? "Precious" : "Semi-precious";
-        return $"{Name}; Type: {type}; Weight: {WeightInCarats} carats; Transparency: {Transparency}%; Price: {CalculatePrice()}$";
+        var priceStr = CalculatePrice().ToString("F2", CultureInfo.InvariantCulture);
+        var weightStr = WeightInCarats.ToString(CultureInfo.InvariantCulture);
+        return $"{Name}; Type: {type}; Weight: {weightStr} carats; Transparency: {Transparency}%; Price: {priceStr}$";
     }
 }
