@@ -6,7 +6,7 @@ public class Ruby : Gemstone
     /// <summary>Створює рубін.</summary>
     /// <param name="weight">Вага в каратах.</param>
     /// <param name="transparency">Прозорість у відсотках.</param>
-    public Ruby(double weight, int transparency) 
+    public Ruby(double weight, int transparency)
     {
         IsPrecious = true;
         BasePricePerCarat = 1500m;

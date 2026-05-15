@@ -18,7 +18,8 @@ public abstract class Gemstone
     }
 
     /// <summary>Рівень прозорості каменя у відсотках.</summary>
-    public int Transparency {
+    public int Transparency
+    {
         get;
         init => field = value < 0
             ? throw new ArgumentException("Transparency cannot be negative", nameof(Transparency))
@@ -26,7 +27,8 @@ public abstract class Gemstone
     }
 
     /// <summary>Назва каменя.</summary>
-    public string Name {        
+    public string Name
+    {
         get;
         init => field = string.IsNullOrWhiteSpace(value)
             ? throw new ArgumentException("Name cannot be empty", nameof(Name))
